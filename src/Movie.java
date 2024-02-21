@@ -8,7 +8,7 @@ public class Movie {
     private int lenghtInMinutes;
     private String genre;
 
-    //Parameter
+    //Constructor
     public Movie(String title, String director, int yearCreated, boolean isInColor, int lenghtInMinutes, String genre) {
         this.title = title;
         this.director = director;

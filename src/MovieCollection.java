@@ -1,18 +1,18 @@
+import java.util.ArrayList;
 public class MovieCollection {
 
-    private Movie[] movieList;
-    int count = 0;
 
-    public MovieCollection() {
-        this.movieList = new Movie[5];
-    }
+    // <Movie> kalder min klasse Movie.java
+    ArrayList<Movie> films = new ArrayList<>();
+
+    //private Movie[] movieList;
+    int count ;
 
     public void addMovie(String title, String director, int yearCreated, boolean isInColor, int lenghtInMinutes, String genre) {
-        // count++ tæller én op og sikrer at næste spiller indsættes på næste indeksplads i arrayet
-        movieList[count++] = new Movie(title, director, yearCreated, isInColor, lenghtInMinutes, genre);
+        Movie movie = new Movie(title, director, yearCreated, isInColor, lenghtInMinutes, genre);
+        films.add(movie);
+
     }
 
-    public Movie[] getMovieList() {
-        return movieList;
-    }
+
 }
