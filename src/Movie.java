@@ -1,5 +1,4 @@
 public class Movie {
-
     //Attributter
     private String title;
     private String director;
@@ -40,5 +39,19 @@ public class Movie {
 
     public String getGenre() {
         return genre;
+    }
+
+    //Override metode
+    @Override
+    public String toString (){
+        String result = "";
+        result += "Title: " + title + "\n" + "Director: " + director + "\n" + "Year: " + yearCreated + "\n"
+            + "Length in minutes: " + lenghtInMinutes + "\n" + "Genre: " + genre + "\n" + "\n";
+        if(isInColor){
+            result += "\n" + "Is in color: Yes";
+        } else {
+            result += "\n" + "Is in color: No";
+        }
+        return result;
     }
 }

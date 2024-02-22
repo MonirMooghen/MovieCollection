@@ -13,4 +13,15 @@ public class Controller {
     public void addMovie(String title, String director, int yearCreated, boolean isInColor, int lenghtInMinutes, String genre) {
         myFirstCollection.addMovie(title, director, yearCreated, isInColor, lenghtInMinutes, genre);
     }
+
+    //User story # 4
+    //As a movie enthusiast I want to see a list of all movies so that I can get an overview of my collection.
+    public void filmList() { //så den kan kalde den henne i main metoden
+        myFirstCollection.filmList();
+    }
+
+    //User story #5
+    public void searchMovie (String title) {
+        myFirstCollection.searchMovie(title);
+    }
 }

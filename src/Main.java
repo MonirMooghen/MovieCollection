@@ -14,32 +14,43 @@ public class Main {
         Controller myFirstCollection = new Controller();
 
 
-    int SENTINEL = 2;
+    final int SENTINEL = 2;
     int menuInput = 0;
+    String title;
 
         while (menuInput != SENTINEL) {
             System.out.println("Welcome to your movie collection");
             System.out.println("1. Create a new movie");
             System.out.println("2. Exit");
+            System.out.println("3. View list of movies");
+            System.out.println("4. Search for movie");
             menuInput = input.nextInt();
 
             if (menuInput == 1) {
 
                 // Tilføj film til MovieCollection
-                System.out.println("Enter movie title:");
-                String title = input.nextLine();
-
                 //dummy bug
                 input.nextLine();
+
+                System.out.println("Enter movie title:");
+                title = input.nextLine();
+
 
                 System.out.println("Enter movie director:");
                 String director = input.nextLine();
 
                 System.out.println("Enter year created:");
                 int yearCreated = input.nextInt();
+                input.nextLine();
 
-                System.out.println("Is the movie in color? Enter True/False");
-                boolean isInColor = input.nextBoolean();
+                //Ændret fra boolean true/false input
+                boolean isInColor = false;
+                System.out.println("Is the movie in color? Write Yes/No");
+                String erIFarve = input.next();
+                erIFarve = erIFarve.toLowerCase();
+                if(erIFarve.equals("yes")){
+                    isInColor=true;
+                }
 
                 System.out.println("Enter duration of movie in minutes:");
                 int lengthInMinutes = input.nextInt();
@@ -53,10 +64,17 @@ public class Main {
 
                 myFirstCollection.addMovie(title, director, yearCreated, isInColor, lengthInMinutes, genre);
 
-                //ArrayList<Movie> test1 = myFirstCollection.getFilms();
-                System.out.println(title + " er blevet tilføjet til listen");
+            } if (menuInput == 3) { //User story #4
+                myFirstCollection.filmList();
+            } if (menuInput == 4) { //User story #5
+                System.out.println("Search for movie title: ");
+                title = input.nextLine();
+                input.nextLine();
+                myFirstCollection.searchMovie(title);
+
             } else {
                 System.out.println("The program has ended");
+
             }
         }
     }
