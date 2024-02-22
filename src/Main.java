@@ -16,7 +16,7 @@ public class Main {
 
     final int SENTINEL = 2;
     int menuInput = 0;
-    String title;
+    String title; //added title så den overwriter de andre title-værdier og kan søge i searchMovie
 
         while (menuInput != SENTINEL) {
             System.out.println("Welcome to your movie collection");
