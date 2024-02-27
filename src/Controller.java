@@ -7,7 +7,7 @@ public class Controller {
 
     private MovieCollection myFirstCollection;
     public Controller() {
-    myFirstCollection = new MovieCollection();
+        myFirstCollection = new MovieCollection();
     }
 
     public void addMovie(String title, String director, int yearCreated, boolean isInColor, int lenghtInMinutes, String genre) {
@@ -21,7 +21,7 @@ public class Controller {
     }
 
     //User story #5
-    public void searchMovie (String title) {
+    public void searchMovie(String title) {
         myFirstCollection.searchMovie(title);
     }
 }

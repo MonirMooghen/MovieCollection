@@ -2,21 +2,18 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-    Scanner input = new Scanner(System.in);
-
-    //User story #1
-    // Lav MovieCollection objekt
-    // MovieCollection firstCollection = new MovieCollection();
-
-    //User story #2:
-    // As a movie enthusiast, I want to see a menu on the screen so that I can choose between
-    // 1) creation of a new movie in my movie collection and 2) exit from the program
+        Scanner input = new Scanner(System.in);
         Controller myFirstCollection = new Controller();
 
 
-    final int SENTINEL = 2;
-    int menuInput = 0;
-    String title; //added title så den overwriter de andre title-værdier og kan søge i searchMovie
+        final int SENTINEL = 2;
+        int menuInput = 0;
+        String title; //added title så den overwriter de andre title-værdier og kan søge i searchMovie
+
+        //Hardcodede værdier
+        myFirstCollection.addMovie("Interstellar", "Christopher Nolan", 2014, true, 201, "SciFi");
+        myFirstCollection.addMovie("Harry Potter 1", "JKR", 2014, true, 201, "Fantasy");
+        myFirstCollection.addMovie("Harry Potter 2", "JKR", 2020, true, 201, "Fantasy");
 
         while (menuInput != SENTINEL) {
             System.out.println("Welcome to your movie collection");
@@ -67,14 +64,13 @@ public class Main {
             } if (menuInput == 3) { //User story #4
                 myFirstCollection.filmList();
             } if (menuInput == 4) { //User story #5
+                input.nextLine();
                 System.out.println("Search for movie title: ");
                 title = input.nextLine();
-                input.nextLine();
                 myFirstCollection.searchMovie(title);
 
             } else {
                 System.out.println("The program has ended");
-
             }
         }
     }
