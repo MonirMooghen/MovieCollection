@@ -4,7 +4,7 @@ public class Movie {
     private String director;
     private int yearCreated;
     private boolean isInColor;
-    private int lenghtInMinutes;
+    private int lengthInMinutes;
     private String genre;
 
     //Constructor
@@ -13,7 +13,7 @@ public class Movie {
         this.director = director;
         this.yearCreated = yearCreated;
         this.isInColor = isInColor;
-        this.lenghtInMinutes = lenghtInMinutes;
+        this.lengthInMinutes = lenghtInMinutes;
         this.genre = genre;
     }
 
@@ -33,8 +33,8 @@ public class Movie {
         return isInColor;
     }
 
-    public int getLenghtInMinutes() {
-        return lenghtInMinutes;
+    public int lengthInMinutes() {
+        return lengthInMinutes;
     }
 
     public String getGenre() {
@@ -46,7 +46,7 @@ public class Movie {
     public String toString (){
         String result = "";
         result += "Title: " + title + "\n" + "Director: " + director + "\n" + "Year: " + yearCreated + "\n"
-                + "Length in minutes: " + lenghtInMinutes + "\n" + "Genre: " + genre ;
+                + "Length in minutes: " + lengthInMinutes + "\n" + "Genre: " + genre ;
         if(isInColor){
             result += "\n" + "Is in color: Yes";
         } else {

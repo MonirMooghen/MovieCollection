@@ -1,17 +1,20 @@
-import java.util.ArrayList;
-
+//import java.util.ArrayList;
 public class Controller {
+//controller constructor. opretter hvad en vi putter ind i den. så moviecollection.
+//controlleren uddelelegerer videre til moviecollection. den er mellemmand mellem main og resten
+
+
 //User story # 3
 //As a movie enthusiast, I want my movie collection to have dynamic sizing so that
 // I don’t have an upper limit of movies that can be stored in the collection.
 
-    private MovieCollection myFirstCollection;
+    MovieCollection myFirstCollection; //slettet "private"
     public Controller() {
         myFirstCollection = new MovieCollection();
     }
 
-    public void addMovie(String title, String director, int yearCreated, boolean isInColor, int lenghtInMinutes, String genre) {
-        myFirstCollection.addMovie(title, director, yearCreated, isInColor, lenghtInMinutes, genre);
+    public void addMovie(String title, String director, int yearCreated, boolean isInColor, int lengthInMinutes, String genre) {
+        myFirstCollection.addMovie(title, director, yearCreated, isInColor, lengthInMinutes, genre);
     }
 
     //User story # 4

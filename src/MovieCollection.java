@@ -6,8 +6,8 @@ public class MovieCollection {
     //private Movie[] movieList;
     //int count ;
     public void addMovie(String title, String director, int yearCreated,
-                         boolean isInColor, int lenghtInMinutes, String genre) {
-        Movie movie = new Movie(title, director, yearCreated, isInColor, lenghtInMinutes, genre);
+                         boolean isInColor, int lengthInMinutes, String genre) {
+        Movie movie = new Movie(title, director, yearCreated, isInColor, lengthInMinutes, genre);
         films.add(movie);
         System.out.println(movie.toString());
 
@@ -15,14 +15,14 @@ public class MovieCollection {
 
     // User story # 4
     //As a movie enthusiast I want to see a list of all movies so that I can get an overview of my collection.
-    public void filmList() {
+    public void filmList() { //laver liste
         for (Movie moviePrintOut : films) {
             System.out.println(moviePrintOut.toString());
         }
 
     }
 
-    // User story #5
+    // User story #5 og #6 - search option
     public void searchMovie(String title) {
         boolean found = false;
 
