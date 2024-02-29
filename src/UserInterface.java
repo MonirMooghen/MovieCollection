@@ -1,9 +1,10 @@
 import java.util.Scanner;
 //import java.util.ArrayList;
 public class UserInterface {
-    void startProgram() {
-    Scanner input = new Scanner(System.in);
     Controller myFirstCollection = new Controller();
+    public void startProgram() {
+    Scanner input = new Scanner(System.in);
+    //Controller myFirstCollection = new Controller();
 
     final int SENTINEL = 2;
     int menuInput = 0;
@@ -31,7 +32,7 @@ public class UserInterface {
         myFirstCollection.filmList();
     }
     if (menuInput == 4) { //User story #5
-        input.nextLine();
+        //input.nextLine(); Midlertidigt taget ud
         System.out.println("Search for movie title: ");
         title = input.nextLine();
         myFirstCollection.searchMovie(title);
@@ -44,7 +45,8 @@ public class UserInterface {
 public void addMovieMethod() {
     //String title; //added title så den overwriter de andre title-værdier og kan søge i searchMovie
     Scanner input = new Scanner(System.in);
-    Controller myFirstCollection = new Controller();
+    //Controller myFirstCollection = new Controller(); Skal ikke være med, ellers laver den en ny controller instans.
+    // Det var min fejl, så den ikke ville lagre eller søge i de film jeg tilføjede
 
     System.out.println("Enter movie title:");
     String title = input.nextLine(); //added "String" skal måske debugges igen

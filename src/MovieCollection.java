@@ -10,7 +10,6 @@ public class MovieCollection {
         Movie movie = new Movie(title, director, yearCreated, isInColor, lengthInMinutes, genre);
         films.add(movie);
         System.out.println(movie.toString());
-
     }
 
     // User story # 4
@@ -19,7 +18,6 @@ public class MovieCollection {
         for (Movie moviePrintOut : films) {
             System.out.println(moviePrintOut.toString());
         }
-
     }
 
     // User story #5 og #6 - search option
