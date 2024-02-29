@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 //import java.util.ArrayList;
 public class Controller {
 //controller constructor. opretter hvad en vi putter ind i den. så moviecollection.
@@ -24,7 +26,17 @@ public class Controller {
     }
 
     //User story #5
-    public void searchMovie(String title) {
-        myFirstCollection.searchMovie(title);
+    public void searchMovies(String title) {
+        ArrayList<Movie> searchResult = myFirstCollection.searchMovies(title);
+        if (searchResult.isEmpty()) {
+            System.out.println("Ingen matchende film fundet.");
+        } else {
+            System.out.println("Følgende film passer til din søgning:");
+            for (Movie movie : searchResult) {
+                System.out.println(movie.toString());
+            }
+            myFirstCollection.searchMovies(title);
+        }
     }
+
 }

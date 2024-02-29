@@ -21,18 +21,13 @@ public class MovieCollection {
     }
 
     // User story #5 og #6 - search option
-    public void searchMovie(String title) {
-        boolean found = false;
-
-        for (Movie searchingMovie : films) {
-            if (searchingMovie.getTitle().toLowerCase().contains(title.toLowerCase())) {
-                System.out.println("Following movies fit your search criteria: ");
-                System.out.println(searchingMovie.toString());
-                found = true;
+    //public void searchMovie(String title) {
+    public ArrayList<Movie> searchMovies(String title){ //Ny metode så den er en ArrayList i stedet
+    ArrayList<Movie> searchMatchList = new ArrayList<>();
+        for (Movie movie : films) {
+            if (movie.getTitle().toLowerCase().contains(title.toLowerCase())) {
+            searchMatchList.add(movie);
             }
-        }
-        if (!found) { //tilføjet så sout kun printes hvis filmen ikke er der, og ikke ved hver iteration
-            System.out.println("No movies fit your search criteria");
-        }
+        } return searchMatchList;
     }
 }

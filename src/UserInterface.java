@@ -1,5 +1,7 @@
 import java.util.Scanner;
-//import java.util.ArrayList;
+import java.util.ArrayList;
+
+//User story #7
 public class UserInterface {
     Controller myFirstCollection = new Controller();
     public void startProgram() {
@@ -28,14 +30,14 @@ public class UserInterface {
         // Tilføj film til MovieCollection
         addMovieMethod(); //metodekald til at oprette film
     }
-    if (menuInput == 3) { //User story #4
+    else if (menuInput == 3) { //User story #4
         myFirstCollection.filmList();
     }
-    if (menuInput == 4) { //User story #5
+    else if (menuInput == 4) { //User story #5
         //input.nextLine(); Midlertidigt taget ud
         System.out.println("Search for movie title: ");
         title = input.nextLine();
-        myFirstCollection.searchMovie(title);
+        myFirstCollection.searchMovies(title);
 
     } else {
         System.out.println("The program has ended");
