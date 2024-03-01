@@ -23,6 +23,7 @@ public class UserInterface {
     System.out.println("2. Exit");
     System.out.println("3. View list of movies");
     System.out.println("4. Search for movie");
+        System.out.println("5. Edit movie"); // ikke færdig
     menuInput = input.nextInt();
     input.nextLine();
 
@@ -34,10 +35,12 @@ public class UserInterface {
         myFirstCollection.filmList();
     }
     else if (menuInput == 4) { //User story #5
-        //input.nextLine(); Midlertidigt taget ud
         System.out.println("Search for movie title: ");
         title = input.nextLine();
         myFirstCollection.searchMovies(title);
+
+    } else if (menuInput == 5) {
+        System.out.println("Choose the movie you want to edit.");
 
     } else {
         System.out.println("The program has ended");

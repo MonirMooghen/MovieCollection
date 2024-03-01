@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 public class MovieCollection {
     // <Movie> kalder min klasse Movie.java
@@ -29,5 +30,17 @@ public class MovieCollection {
             searchMatchList.add(movie);
             }
         } return searchMatchList;
+    }
+
+    //User story #8 - edit option - ikke færdig
+    public String editMovie(int index, int attribute, String str){
+        Movie movie = films.get(index);
+        if (attribute == 1) {
+            movie.setTitle(str);
+        }
+        else if (attribute == 3){
+            movie.setYear(Integer.parseInt(str));
+        }
+        return movie.toString();
     }
 }
