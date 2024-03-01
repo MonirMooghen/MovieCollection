@@ -5,7 +5,6 @@ public class Controller {
 //controller constructor. opretter hvad en vi putter ind i den. så moviecollection.
 //controlleren uddelelegerer videre til moviecollection. den er mellemmand mellem main og resten
 
-
 //User story # 3
 //As a movie enthusiast, I want my movie collection to have dynamic sizing so that
 // I don’t have an upper limit of movies that can be stored in the collection.

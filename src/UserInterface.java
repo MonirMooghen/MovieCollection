@@ -6,7 +6,6 @@ public class UserInterface {
     Controller myFirstCollection = new Controller();
     public void startProgram() {
     Scanner input = new Scanner(System.in);
-    //Controller myFirstCollection = new Controller();
 
     final int SENTINEL = 2;
     int menuInput = 0;
